@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Propiedad - Marbi Silva | PREIC</title>
+    <meta name="description" content="Detalles completos de la propiedad comercial o industrial. Contacta a Marbi Silva para más información.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navegación -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-lg border-b border-gray-100/50 shadow-sm">
+        <div class="container mx-auto px-6 lg:px-16 xl:px-24 py-5">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="relative">
+                        <div class="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-all duration-300 group-hover:rotate-3">
+                            <i class="fas fa-building text-white text-lg"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h1 class="font-display text-xl font-bold text-gray-800 group-hover:text-purple-600 transition-colors">
+                            Marbi Silva
+                        </h1>
+                        <p class="text-xs text-gray-600 font-medium">PREIC Real Estate</p>
+                    </div>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-700 hover:text-purple-600 transition font-medium">Inicio</a>
+                    <a href="propiedades.html" class="text-gray-700 hover:text-purple-600 transition font-medium">Propiedades</a>
+                    <a href="https://wa.me/50765963227" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full font-medium transition-all flex items-center">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        WhatsApp
+                    </a>
+                </div>
+                
+                <button id="menuToggle" class="md:hidden w-10 h-10 rounded-lg bg-gray-100 hover:bg-purple-100 text-gray-700 hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-200 shadow-lg">
+            <div class="container mx-auto px-6 lg:px-16 xl:px-24 py-6 space-y-2">
+                <a href="index.html" class="block px-4 py-3 rounded-xl text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-all duration-300 font-medium">
+                    <i class="fas fa-home mr-3 text-purple-600"></i>Inicio
+                </a>
+                <a href="propiedades.html" class="block px-4 py-3 rounded-xl text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-all duration-300 font-medium">
+                    <i class="fas fa-building mr-3 text-purple-600"></i>Propiedades
+                </a>
+                <a href="https://wa.me/50765963227" target="_blank" rel="noopener noreferrer" class="block px-4 py-3 rounded-xl bg-green-500 text-white font-medium text-center shadow-lg transform hover:scale-105 transition-all">
+                    <i class="fab fa-whatsapp mr-3"></i>WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b border-gray-200 pt-24 pb-4">
+        <div class="container mx-auto px-6 lg:px-16 xl:px-24">
+            <nav class="flex items-center space-x-2 text-sm">
+                <a href="index.html" class="text-gray-500 hover:text-purple-600 transition">Inicio</a>
+                <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                <a href="propiedades.html" class="text-gray-500 hover:text-purple-600 transition">Propiedades</a>
+                <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                <span class="text-gray-800 font-semibold">Detalle de Propiedad</span>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- Detalle de Propiedad -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6 lg:px-16 xl:px-24">
+            <div class="grid lg:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Contenido Principal -->
+                <div class="lg:col-span-2">
+                    <!-- Galería de Imágenes -->
+                    <div class="mb-8">
+                        <div class="relative rounded-2xl overflow-hidden shadow-xl mb-4">
+                            <img id="mainImage" src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                                 alt="Propiedad" 
+                                 class="w-full h-96 object-cover">
+                            <div class="absolute top-4 right-4">
+                                <span id="propertyType" class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Venta</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-4 gap-4">
+                            <div class="relative rounded-lg overflow-hidden cursor-pointer border-2 border-transparent hover:border-purple-600 transition">
+                                <img src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" 
+                                     alt="Vista 1" 
+                                     class="w-full h-20 object-cover"
+                                     onclick="changeMainImage(this.src)">
+                            </div>
+                            <div class="relative rounded-lg overflow-hidden cursor-pointer border-2 border-transparent hover:border-purple-600 transition">
+                                <img src="https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" 
+                                     alt="Vista 2" 
+                                     class="w-full h-20 object-cover"
+                                     onclick="changeMainImage(this.src)">
+                            </div>
+                            <div class="relative rounded-lg overflow-hidden cursor-pointer border-2 border-transparent hover:border-purple-600 transition">
+                                <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" 
+                                     alt="Vista 3" 
+                                     class="w-full h-20 object-cover"
+                                     onclick="changeMainImage(this.src)">
+                            </div>
+                            <div class="relative rounded-lg overflow-hidden cursor-pointer border-2 border-transparent hover:border-purple-600 transition">
+                                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                     alt="Vista 4" 
+                                     class="w-full h-20 object-cover"
+                                     onclick="changeMainImage(this.src)">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Información de la Propiedad -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 mb-8">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                            <div>
+                                <h1 id="propertyTitle" class="font-display text-4xl font-bold text-gray-800 mb-2">
+                                    Galera Industrial Moderna
+                                </h1>
+                                <div class="flex items-center space-x-4 text-gray-600">
+                                    <span class="flex items-center">
+                                        <i class="fas fa-map-marker-alt text-purple-600 mr-2"></i>
+                                        <span id="propertyLocation">Zona Industrial, Ciudad</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="mt-4 md:mt-0">
+                                <div id="propertyPrice" class="text-3xl font-bold text-purple-600">$350,000</div>
+                                <p class="text-sm text-gray-500">Precio de Venta</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Características -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-6 border-t border-b border-gray-200 my-6">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-purple-600 mb-1">
+                                    <i class="fas fa-ruler-combined"></i>
+                                </div>
+                                <div class="text-sm text-gray-600">Área Total</div>
+                                <div id="propertyArea" class="font-semibold text-gray-800">2,500 m²</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-purple-600 mb-1">
+                                    <i class="fas fa-door-open"></i>
+                                </div>
+                                <div class="text-sm text-gray-600">Altura</div>
+                                <div id="propertyHeight" class="font-semibold text-gray-800">8 m</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-purple-600 mb-1">
+                                    <i class="fas fa-parking"></i>
+                                </div>
+                                <div class="text-sm text-gray-600">Estacionamiento</div>
+                                <div id="propertyParking" class="font-semibold text-gray-800">20 espacios</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-purple-600 mb-1">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="text-sm text-gray-600">Año</div>
+                                <div id="propertyYear" class="font-semibold text-gray-800">2020</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Descripción -->
+                        <div>
+                            <h2 class="font-display text-2xl font-bold text-gray-800 mb-4">Descripción</h2>
+                            <div id="propertyDescription" class="text-gray-700 leading-relaxed space-y-4">
+                                <p>
+                                    Excelente galera industrial moderna ubicada en zona estratégica con fácil acceso a carreteras principales. 
+                                    Ideal para empresas de logística, producción y almacenamiento.
+                                </p>
+                                <p>
+                                    La propiedad cuenta con amplios espacios de trabajo, áreas de almacenamiento, oficinas administrativas 
+                                    y estacionamiento para vehículos pesados. Infraestructura completa con servicios básicos, sistema de 
+                                    seguridad y fácil acceso para carga y descarga.
+                                </p>
+                                <h3 class="font-semibold text-gray-800 mt-6 mb-3">Características Principales:</h3>
+                                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                    <li>Área total de 2,500 m² construidos</li>
+                                    <li>Altura libre de 8 metros, ideal para almacenamiento vertical</li>
+                                    <li>20 espacios de estacionamiento</li>
+                                    <li>Oficinas administrativas incluidas</li>
+                                    <li>Sistema de seguridad 24/7</li>
+                                    <li>Acceso para vehículos pesados</li>
+                                    <li>Servicios básicos completos</li>
+                                    <li>Ubicación estratégica en zona industrial</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Ubicación -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+                        <h2 class="font-display text-2xl font-bold text-gray-800 mb-4">Ubicación</h2>
+                        <div class="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
+                            <div class="text-center text-gray-500">
+                                <i class="fas fa-map-marked-alt text-4xl mb-2"></i>
+                                <p>Mapa de ubicación</p>
+                                <p class="text-sm mt-2">Zona Industrial, Ciudad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar de Contacto -->
+                <div class="lg:col-span-1">
+                    <div class="sticky top-24">
+                        <!-- Card de Contacto -->
+                        <div class="bg-white rounded-2xl shadow-xl p-6 border border-gray-100 mb-6">
+                            <div class="text-center mb-6">
+                                <div class="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                    <i class="fas fa-user text-white text-2xl"></i>
+                                </div>
+                                <h3 class="font-display text-2xl font-bold text-gray-800 mb-2">Marbi Silva</h3>
+                                <p class="text-gray-600 text-sm">Asesora de Bienes Raíces</p>
+                                <p class="text-gray-500 text-xs mt-1">PREIC Real Estate</p>
+                            </div>
+                            
+                            <div class="space-y-4 mb-6">
+                                <a href="https://wa.me/50765963227?text=Hola%20Marbi,%20estoy%20interesado%20en%20esta%20propiedad" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   class="w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-xl font-bold text-center flex items-center justify-center transition-all transform hover:scale-105 shadow-lg">
+                                    <i class="fab fa-whatsapp text-xl mr-2"></i>
+                                    Contactar por WhatsApp
+                                </a>
+                                
+                                <a href="tel:+50765963227" 
+                                   class="w-full bg-purple-600 hover:bg-purple-700 text-white py-4 rounded-xl font-bold text-center flex items-center justify-center transition-all transform hover:scale-105 shadow-lg">
+                                    <i class="fas fa-phone mr-2"></i>
+                                    Llamar Ahora
+                                </a>
+                                
+                                <a href="mailto:marbi.silva@preic.com?subject=Consulta%20sobre%20Propiedad" 
+                                   class="w-full border-2 border-purple-600 text-purple-600 hover:bg-purple-50 py-4 rounded-xl font-bold text-center flex items-center justify-center transition-all">
+                                    <i class="fas fa-envelope mr-2"></i>
+                                    Enviar Email
+                                </a>
+                            </div>
+                            
+                            <div class="border-t border-gray-200 pt-4">
+                                <h4 class="font-semibold text-gray-800 mb-3">Información de Contacto</h4>
+                                <div class="space-y-2 text-sm">
+                                    <div class="flex items-center text-gray-600">
+                                        <i class="fas fa-phone text-purple-600 mr-3 w-5"></i>
+                                        <a href="tel:+50765963227" class="hover:text-purple-600">+507 6596-3227</a>
+                                    </div>
+                                    <div class="flex items-center text-gray-600">
+                                        <i class="fas fa-envelope text-purple-600 mr-3 w-5"></i>
+                                        <a href="mailto:marbi.silva@preic.com" class="hover:text-purple-600">marbi.silva@preic.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Formulario Rápido -->
+                        <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg p-6 border border-purple-100">
+                            <h3 class="font-display text-xl font-bold text-gray-800 mb-4">Solicitar Información</h3>
+                            <form id="quickContactForm" class="space-y-4">
+                                <input type="text" 
+                                       placeholder="Tu nombre" 
+                                       class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-600 transition"
+                                       required>
+                                <input type="tel" 
+                                       placeholder="Teléfono" 
+                                       class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-600 transition"
+                                       required>
+                                <textarea rows="3" 
+                                          placeholder="Mensaje" 
+                                          class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-600 transition resize-none"
+                                          required></textarea>
+                                <button type="submit" 
+                                        class="w-full gradient-primary text-white py-3 rounded-xl font-bold hover:shadow-xl transition-all transform hover:scale-105">
+                                    Enviar Solicitud
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Propiedades Relacionadas -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6 lg:px-16 xl:px-24">
+            <h2 class="font-display text-3xl font-bold text-gray-800 mb-8 text-center">
+                Propiedades <span class="text-gradient">Relacionadas</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Propiedad relacionada 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <a href="propiedad.html?id=2">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" 
+                                 alt="Oficina" 
+                                 class="w-full h-full object-cover transition transform hover:scale-110 duration-500">
+                            <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Alquiler</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">Oficinas Ejecutivas</h3>
+                            <p class="text-gray-600 text-sm mb-3">Espacios modernos en zona comercial</p>
+                            <div class="text-purple-600 font-bold">$1,200/mes</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Propiedad relacionada 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <a href="propiedad.html?id=3">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" 
+                                 alt="Local" 
+                                 class="w-full h-full object-cover transition transform hover:scale-110 duration-500">
+                            <span class="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Venta</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">Local Comercial</h3>
+                            <p class="text-gray-600 text-sm mb-3">Ubicación céntrica premium</p>
+                            <div class="text-purple-600 font-bold">$185,000</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Propiedad relacionada 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <a href="propiedad.html?id=5">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Almacén" 
+                                 class="w-full h-full object-cover transition transform hover:scale-110 duration-500">
+                            <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Alquiler</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">Almacén Logístico</h3>
+                            <p class="text-gray-600 text-sm mb-3">Espacio para distribución</p>
+                            <div class="text-purple-600 font-bold">$2,800/mes</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-purple-900 text-white py-12">
+        <div class="container mx-auto px-6 lg:px-16 xl:px-24">
+            <div class="text-center">
+                <p class="text-gray-300">
+                    2026 Website desarrollado por <a href="https://www.nixonlopez.com" target="_blank" rel="noopener noreferrer" class="text-purple-400 font-semibold hover:text-purple-300 transition hover:underline">nixondev</a>. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Botones flotantes -->
+    <a href="https://wa.me/50765963227" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center transition-all transform hover:scale-110 hover:shadow-green-500/50 group animate-bounce"
+       style="animation-duration: 2s;">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+    
+    <button id="scrollToTop" 
+            class="fixed bottom-6 left-6 z-50 gradient-primary text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center transition-all transform hover:scale-110 opacity-0 pointer-events-none"
+            aria-label="Subir arriba">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+        // Datos de propiedades (simulado - en producción vendría de una API)
+        const properties = {
+            1: {
+                title: "Galera Industrial Moderna",
+                type: "Venta",
+                price: "$350,000",
+                location: "Zona Industrial, Ciudad",
+                area: "2,500 m²",
+                height: "8 m",
+                parking: "20 espacios",
+                year: "2020",
+                description: "Excelente galera industrial moderna ubicada en zona estratégica con fácil acceso a carreteras principales.",
+                image: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            },
+            2: {
+                title: "Oficinas Ejecutivas",
+                type: "Alquiler",
+                price: "$1,200/mes",
+                location: "Zona Comercial Premium",
+                area: "150 m²",
+                height: "3 m",
+                parking: "5 espacios",
+                year: "2022",
+                description: "Espacios modernos y funcionales en zona comercial premium.",
+                image: "https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            },
+            3: {
+                title: "Local Comercial Premium",
+                type: "Venta",
+                price: "$185,000",
+                location: "Centro Comercial",
+                area: "80 m²",
+                height: "4 m",
+                parking: "2 espacios",
+                year: "2021",
+                description: "Ubicación céntrica, ideal para retail o servicios profesionales.",
+                image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            }
+        };
+        
+        // Cargar datos de la propiedad según el ID en la URL
+        function loadPropertyData() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const propertyId = urlParams.get('id') || '1';
+            const property = properties[propertyId] || properties[1];
+            
+            // Actualizar contenido
+            document.getElementById('propertyTitle').textContent = property.title;
+            document.getElementById('propertyType').textContent = property.type;
+            document.getElementById('propertyType').className = property.type === 'Venta' 
+                ? 'bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold'
+                : 'bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold';
+            document.getElementById('propertyPrice').textContent = property.price;
+            document.getElementById('propertyLocation').textContent = property.location;
+            document.getElementById('propertyArea').textContent = property.area;
+            document.getElementById('propertyHeight').textContent = property.height;
+            document.getElementById('propertyParking').textContent = property.parking;
+            document.getElementById('propertyYear').textContent = property.year;
+            document.getElementById('mainImage').src = property.image;
+        }
+        
+        // Cambiar imagen principal
+        function changeMainImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+        
+        // Formulario de contacto rápido
+        document.getElementById('quickContactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('¡Gracias por tu interés! Marbi se pondrá en contacto contigo pronto.');
+            e.target.reset();
+        });
+        
+        // Cargar datos al iniciar
+        loadPropertyData();
+    </script>
+</body>
+</html>

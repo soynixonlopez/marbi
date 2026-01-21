@@ -1,0 +1,506 @@
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.font-display {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes blob {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-blob {
+    animation: blob 7s infinite;
+}
+
+.animate-slideInLeft {
+    animation: slideInLeft 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-slideInRight {
+    animation: slideInRight 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-scaleIn {
+    animation: scaleIn 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+/* Gradientes personalizados */
+.gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-secondary {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.gradient-overlay {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+}
+
+/* Efectos hover para tarjetas */
+.property-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.property-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.property-card:hover::before {
+    left: 100%;
+}
+
+.property-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(102, 126, 234, 0.15);
+}
+
+/* Hero específico */
+.hero-content {
+    animation: slideInLeft 0.8s ease-out 0.2s forwards;
+}
+
+.hero-image {
+    animation: slideInRight 0.8s ease-out 0.4s forwards;
+}
+
+/* Navegación sticky mejorada */
+.navbar-scrolled {
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+/* Efectos para enlaces de navegación */
+.nav-link {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Menú de navegación elegante */
+nav .bg-gray-50\/80 {
+    backdrop-filter: blur(10px);
+    background: rgba(249, 250, 251, 0.9);
+}
+
+/* Transiciones para propiedades filtradas */
+.property-item {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Animaciones al hacer scroll */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efectos de entrada para secciones */
+section {
+    position: relative;
+}
+
+/* Mejoras en botones */
+button, a[role="button"] {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+button:hover, a[role="button"]:hover {
+    transform: translateY(-2px);
+}
+
+/* Efectos de imagen hover elegantes */
+.property-card img {
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.6s ease;
+}
+
+.property-card:hover img {
+    transform: scale(1.1) rotate(1deg);
+    filter: brightness(1.1) contrast(1.05);
+}
+
+/* Imagen hero elegante */
+.hero-image img {
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: brightness(1.05) contrast(1.02);
+}
+
+.hero-image:hover img {
+    transform: scale(1.02);
+    filter: brightness(1.1) contrast(1.05);
+}
+
+/* Imagen sobre mí elegante */
+#sobre img {
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.8s ease;
+}
+
+#sobre img:hover {
+    transform: scale(1.02);
+    filter: brightness(1.08) contrast(1.05);
+}
+
+/* Sombras mejoradas y elegantes */
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(102, 126, 234, 0.05);
+}
+
+.shadow-elegant {
+    box-shadow: 0 20px 60px -15px rgba(102, 126, 234, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Bordes elegantes con gradiente */
+.border-gradient {
+    position: relative;
+    border-radius: 1.5rem;
+    padding: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+}
+
+.border-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: calc(1.5rem - 4px);
+    background: white;
+    z-index: -1;
+}
+
+/* Efectos de texto */
+h1, h2, h3 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h1.text-gray-800,
+h2.text-gray-800,
+h3.text-gray-800 {
+    -webkit-text-fill-color: #1f2937;
+    background: none;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Mejoras en formularios elegantes */
+input:focus, textarea:focus, select:focus {
+    transform: scale(1.01) translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15), 0 0 0 3px rgba(102, 126, 234, 0.1);
+    border-color: #667eea;
+}
+
+/* Efectos de entrada suaves para secciones */
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decoraciones elegantes de fondo */
+.bg-elegant-pattern {
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(240, 147, 251, 0.05) 0%, transparent 50%);
+}
+
+/* Hover effects elegantes para iconos */
+.icon-elegant {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.icon-elegant:hover {
+    transform: translateY(-5px) scale(1.1);
+    filter: drop-shadow(0 10px 20px rgba(102, 126, 234, 0.3));
+}
+
+/* Texto con gradiente elegante */
+.text-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Mejoras en cards elegantes */
+.card-elegant {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-elegant:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(102, 126, 234, 0.2);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+/* Animación de brillo elegante */
+@keyframes shimmer-elegant {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        transparent 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer-elegant 3s infinite;
+}
+
+/* Efectos de carga */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Modales */
+.modal {
+    display: flex;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scrollbar personalizado para modales */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Botones flotantes */
+#scrollToTop {
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#scrollToTop:hover {
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* Animación para botón de WhatsApp */
+@keyframes pulse-whatsapp {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+}
+
+.fixed.bottom-6.right-6 {
+    animation: pulse-whatsapp 2s infinite;
+}
+
+/* Responsive animations */
+@media (max-width: 768px) {
+    .animate-blob {
+        animation-duration: 10s;
+    }
+    
+    .hero-content,
+    .hero-image {
+        animation-duration: 0.6s;
+    }
+    
+    .modal-content {
+        max-width: 95%;
+        margin: 1rem;
+    }
+    
+    /* Ajustar posición de botones flotantes en móvil */
+    .fixed.bottom-6.right-6,
+    #scrollToTop {
+        bottom: 1rem;
+    }
+    
+    .fixed.bottom-6.right-6 {
+        right: 1rem;
+    }
+    
+    #scrollToTop {
+        left: 1rem;
+    }
+}
