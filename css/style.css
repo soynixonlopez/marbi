@@ -15,6 +15,23 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
+.site-logo {
+    height: 3.5rem;
+    width: auto;
+    object-fit: contain;
+}
+
+@media (min-width: 768px) {
+    .site-logo {
+        height: 4rem;
+    }
+}
+
+.site-logo--footer {
+    height: auto;
+    max-height: 5.5rem;
+}
+
 /* Animaciones personalizadas */
 @keyframes fadeInUp {
     from {
